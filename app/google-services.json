@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "341966686589",
+    "firebase_url": "https://nbaequipos.firebaseio.com",
+    "project_id": "nbaequipos",
+    "storage_bucket": "nbaequipos.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:341966686589:android:c0569b0444a9303c",
+        "android_client_info": {
+          "package_name": "com.example.bescalona.nbaapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "341966686589-472nvivmjg7hpc05870ag5tddj394v4t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.bescalona.nbaapplication",
+            "certificate_hash": "699248de16a0347ef5d1f8911375bf0b1853246a"
+          }
+        },
+        {
+          "client_id": "341966686589-iav7nm7gftlml7m295k8pr5l2j7o6ilm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAeqyX430tTSJEgNBoUY35T2pNPEF2cbDg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "341966686589-iav7nm7gftlml7m295k8pr5l2j7o6ilm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
