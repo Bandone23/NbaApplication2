@@ -1,6 +1,6 @@
-package com.example.bescalona.nbaapplication.LoginInterfaz;
+package com.example.bescalona.nbaapplication.Interfaz;
 
-public interface InterfazRegistro {
+public interface MvpStepsRegister {
 
     interface Vista{
         void oknUsuario();

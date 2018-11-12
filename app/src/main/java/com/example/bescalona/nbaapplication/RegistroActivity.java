@@ -5,19 +5,16 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.ProgressBar;
 import android.widget.Toast;
 
-import com.example.bescalona.nbaapplication.LoginInterfaz.InterfazLogin;
-import com.example.bescalona.nbaapplication.LoginInterfaz.InterfazRegistro;
-import com.example.bescalona.nbaapplication.Presentador.PresentadorLogin;
+import com.example.bescalona.nbaapplication.Interfaz.MvpStepsRegister;
 import com.example.bescalona.nbaapplication.Presentador.PresentadorRegistro;
 
-public class RegistroActivity extends AppCompatActivity  implements InterfazRegistro.Vista {
+public class RegistroActivity extends AppCompatActivity  implements MvpStepsRegister.Vista {
 
     private EditText email,password;
 
-    private InterfazRegistro.Presentador presentador;
+    private MvpStepsRegister.Presentador presentador;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

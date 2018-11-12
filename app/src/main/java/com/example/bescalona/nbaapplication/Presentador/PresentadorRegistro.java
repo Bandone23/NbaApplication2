@@ -1,16 +1,14 @@
 package com.example.bescalona.nbaapplication.Presentador;
 
-import com.example.bescalona.nbaapplication.LoginInterfaz.InterfazLogin;
-import com.example.bescalona.nbaapplication.LoginInterfaz.InterfazRegistro;
-import com.example.bescalona.nbaapplication.Modelo.ModeloLogin;
+import com.example.bescalona.nbaapplication.Interfaz.MvpStepsRegister;
 import com.example.bescalona.nbaapplication.Modelo.ModeloRegistro;
 
-public class PresentadorRegistro implements InterfazRegistro.Presentador,InterfazRegistro.Avisos {
+public class PresentadorRegistro implements MvpStepsRegister.Presentador,MvpStepsRegister.Avisos {
 
-    private  InterfazRegistro.Vista vista;
-    private  InterfazRegistro.Modelo modelo;
+    private  MvpStepsRegister.Vista vista;
+    private  MvpStepsRegister.Modelo modelo;
 
-    public PresentadorRegistro(InterfazRegistro.Vista vista) {
+    public PresentadorRegistro(MvpStepsRegister.Vista vista) {
         this.vista = vista;
         modelo =new ModeloRegistro(this);
 

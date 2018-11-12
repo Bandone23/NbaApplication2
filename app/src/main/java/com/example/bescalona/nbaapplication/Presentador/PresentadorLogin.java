@@ -2,33 +2,34 @@ package com.example.bescalona.nbaapplication.Presentador;
 
 
 
-import com.example.bescalona.nbaapplication.LoginInterfaz.InterfazLogin;
+import com.example.bescalona.nbaapplication.Interfaz.MvpStepsLogin;
 import com.example.bescalona.nbaapplication.Modelo.ModeloLogin;
 
-public class PresentadorLogin implements InterfazLogin.Presentador,InterfazLogin.Avisos {
-   private  InterfazLogin.Vista vista;
-   private  InterfazLogin.Modelo modelo;
+public class PresentadorLogin implements MvpStepsLogin.Presentador,MvpStepsLogin.Avisos {
+   private  MvpStepsLogin.Vista vista;
+   private  MvpStepsLogin.Modelo modelo;
 
 
 // ...
-    public PresentadorLogin(InterfazLogin.Vista vista) {
+    public PresentadorLogin(MvpStepsLogin.Vista vista) {
         this.vista = vista;
         modelo =new ModeloLogin(this);
   }
-    @Override
-    public void inicioSesion(String email, String password) {
-        vista.muestraProgress();
-        modelo.hacerSesion(email, password);
 
-    }
-    @Override
+  @Override
     public void Ok() {
-       vista.toastSi();
-       vista.ocultaProgress();
+       vista.messageYes();
+       vista.hideProgress();
     }
     @Override
     public void Error() {
-       vista.toastNo();
-       vista.ocultaProgress();
+       vista.messagedoNot();
+       vista.hideProgress();
+    }
+
+    @Override
+    public void sendLogin(String email, String password) {
+        vista.watchProgress();
+        modelo.logIn(email, password);
     }
 }

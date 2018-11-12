@@ -3,8 +3,7 @@ package com.example.bescalona.nbaapplication.Modelo;
 import android.support.annotation.NonNull;
 import android.util.Log;
 
-import com.example.bescalona.nbaapplication.LoginInterfaz.InterfazLogin;
-import com.example.bescalona.nbaapplication.LoginInterfaz.InterfazRegistro;
+import com.example.bescalona.nbaapplication.Interfaz.MvpStepsRegister;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -13,11 +12,9 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-import java.security.PrivateKey;
+public class ModeloRegistro  implements MvpStepsRegister.Modelo {
 
-public class ModeloRegistro  implements InterfazRegistro.Modelo {
-
-    private InterfazRegistro.Avisos avisos;
+    private MvpStepsRegister.Avisos avisos;
     private FirebaseAuth auth;
     private static final String TAG = "EmailPassword";
 
@@ -28,7 +25,7 @@ public class ModeloRegistro  implements InterfazRegistro.Modelo {
 
 
 
-    public ModeloRegistro(InterfazRegistro.Avisos avisos) {
+    public ModeloRegistro(MvpStepsRegister.Avisos avisos) {
         this.avisos = avisos;
         auth = FirebaseAuth.getInstance();
 

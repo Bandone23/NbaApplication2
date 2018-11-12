@@ -2,31 +2,26 @@ package com.example.bescalona.nbaapplication.Modelo;
 
 import android.support.annotation.NonNull;
 import android.util.Log;
-import android.view.View;
-import android.widget.Toast;
 
-import com.example.bescalona.nbaapplication.LoginActivity;
-import com.example.bescalona.nbaapplication.LoginInterfaz.InterfazLogin;
+import com.example.bescalona.nbaapplication.Interfaz.MvpStepsLogin;
+import com.example.bescalona.nbaapplication.Presentador.PresentadorLogin;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class ModeloLogin implements InterfazLogin.Modelo {
+public class ModeloLogin implements MvpStepsLogin.Modelo {
 
-    private InterfazLogin.Avisos avisos;
+    private MvpStepsLogin.Avisos avisos;
     private FirebaseAuth auth;
     private static final String TAG = "EmailPassword";
 
-
-    public ModeloLogin(InterfazLogin.Avisos avisos) {
-        this.avisos = avisos;
-        auth = FirebaseAuth.getInstance();
+    public ModeloLogin(PresentadorLogin presentadorLogin) {
     }
 
     @Override
-    public void hacerSesion(String email, String password) {
+    public void logIn(String email, String password) {
         auth.signInWithEmailAndPassword(email, password).addOnCompleteListener( new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
@@ -43,10 +38,8 @@ public class ModeloLogin implements InterfazLogin.Modelo {
                 }
             }
         });
-
+        
     }
-
-
 }
 
 
